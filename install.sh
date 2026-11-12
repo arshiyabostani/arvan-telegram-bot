@@ -693,7 +693,6 @@ parse_args() {
 
 main() {
   parse_args "$@"
-  [[ $REPO != *arshiyabostani* ]] || die "edit REPO at the top of install.sh (or set ARVAN_BOT_REPO=owner/name) first"
   [[ $REF =~ ^[A-Za-z0-9._/-]+$ ]] || die "--ref may only contain letters, digits and . _ / -"
   [[ $(uname -s) == Linux ]] || die "Linux only"
   TMP=$(mktemp -d)
